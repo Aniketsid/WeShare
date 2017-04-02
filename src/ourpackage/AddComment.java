@@ -23,7 +23,7 @@ public class AddComment extends HttpServlet {
 	 /**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 	    HttpSession session = request.getSession();
 		String topicid = request.getParameter("id");
@@ -50,8 +50,8 @@ public class AddComment extends HttpServlet {
 				document.put("time",dateFormat.format(date));
 				 table.insert(document); // insert doc
 				  System.out.println("Comment added");
-				  
-			response.sendRedirect("./ViewTopic?id="+topicid);
+				  String url="./ViewTopic?id="+topicid;
+				  response.sendRedirect(url);;
 		 	}
 		 	catch(Exception e)
 		 	{

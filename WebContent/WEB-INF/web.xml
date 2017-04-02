@@ -136,4 +136,26 @@
     <servlet-name>GetComments</servlet-name>
     <url-pattern>/GetComments</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>People</display-name>
+    <servlet-name>People</servlet-name>
+    <servlet-class>ourpackage.People</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>People</servlet-name>
+    <url-pattern>/People</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>Follows</display-name>
+    <servlet-name>Follows</servlet-name>
+    <servlet-class>ourpackage.Follows</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Follows</servlet-name>
+    <url-pattern>/Follows</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>
